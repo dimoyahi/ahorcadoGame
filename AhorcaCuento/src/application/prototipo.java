@@ -35,7 +35,7 @@ public class prototipo {
 		arrayPalabras[3] = "gente";
 		arrayPalabras[4] = "morira";
 		arrayPalabras[5] = "impedirlo";
-		arrayPalabras[6] = "monte";
+		arrayPalabras[6] = "diegoarmadnomoya";
 
 		do {
 
@@ -65,7 +65,7 @@ public class prototipo {
 			while (intentos < INTENTOS_TOTALES && aciertos != tusRespuestas.length) {
 				imprimeOculta(tusRespuestas);
 				// Preguntamos la letra por teclado
-				System.out.println("\nIngrese una letra: ");
+				//System.out.println("\nIngrese una letra: ");
 				resp = teclado.next().toLowerCase().charAt(0);
 				// Recorremos el array y comprobamos si se ha producido un acierto
 				for (int i = 0; i < descomponer.length; i++) {

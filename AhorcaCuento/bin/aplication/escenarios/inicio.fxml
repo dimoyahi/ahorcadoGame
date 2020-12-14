@@ -107,17 +107,17 @@
                   <Image url="/imagenes/fondo/logoCuento.png" />
                </image>
             </ImageView>
-            <Label fx:id="frase" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="165.0" prefHeight="180.0" prefWidth="463.0" style="-fx-background-color: #FDFEFE;" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="frase" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="165.0" prefHeight="118.0" prefWidth="463.0" style="-fx-background-color: #FDFEFE;" textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="14.0" />
+                  <Font size="10.0" />
                </font>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>
             </Label>
-            <ImageView fx:id="ahorcado" fitHeight="332.0" fitWidth="153.0" layoutX="36.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ahorcado" fitHeight="332.0" fitWidth="153.0" layoutX="36.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/imagenes/fondo/ahorcado.jpg" />
+                  <Image url="/imagenes/Ahorcado/ahorcado_0.jpg" />
                </image>
             </ImageView>
             <GridPane layoutX="211.0" layoutY="369.0" prefHeight="135.0" prefWidth="463.0">
@@ -168,13 +168,17 @@
                   <Button mnemonicParsing="false" onAction="#bto_X" prefHeight="129.0" prefWidth="46.0" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                   <Button mnemonicParsing="false" onAction="#bto_Y" prefHeight="129.0" prefWidth="46.0" text="Y" GridPane.columnIndex="5" GridPane.rowIndex="4" />
                   <Button mnemonicParsing="false" onAction="#bto_Z" prefHeight="129.0" prefWidth="46.0" text="Z" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-                  <Button mnemonicParsing="false" onAction="#bto_A" prefHeight="129.0" prefWidth="46.0" text="A" />
+                  <Button fx:id="A" mnemonicParsing="false" onAction="#bto_A" prefHeight="129.0" prefWidth="46.0" text="A" />
                </children>
             </GridPane>
             <ProgressBar fx:id="tiempo" layoutX="211.0" layoutY="538.0" prefHeight="30.0" prefWidth="463.0" progress="0.0" />
+            <Label fx:id="textoAhorcado" alignment="CENTER" layoutX="215.0" layoutY="305.0" prefHeight="54.0" prefWidth="456.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
          </children></Pane>
-      <Pane fx:id="configuracion" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #14A1DE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="fondo" fitHeight="600.0" fitWidth="700.0" pickOnBounds="true">
                <image>
