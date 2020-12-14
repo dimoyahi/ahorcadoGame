@@ -77,7 +77,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="Juego" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #D6EAF8;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="Juego" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #D6EAF8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="13.0" prefHeight="81.0" prefWidth="159.0" text="AhorcaCuento" textAlignment="CENTER" textFill="#ba5050">
                <font>
@@ -174,7 +174,7 @@
             <ProgressBar fx:id="tiempo" layoutX="211.0" layoutY="538.0" prefHeight="30.0" prefWidth="463.0" progress="0.0" />
          </children></Pane>
       <Pane fx:id="configuracion" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #14A1DE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ImageView fx:id="fondo" fitHeight="600.0" fitWidth="700.0" pickOnBounds="true">
                <image>
