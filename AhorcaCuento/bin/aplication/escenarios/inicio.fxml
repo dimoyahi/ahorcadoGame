@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
@@ -9,28 +10,236 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane centerShape="false" minWidth="-Infinity" prefHeight="405.0" prefWidth="700.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplication.escenarios.controller.inicioController">
+<AnchorPane centerShape="false" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplication.escenarios.controller.inicioController">
    <children>
-      <ImageView fx:id="fondo" fitHeight="600.0" fitWidth="700.0" layoutY="1.0" pickOnBounds="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="24.0" prefHeight="104.0" prefWidth="700.0" text="AhorcaCuento" textAlignment="CENTER" textFill="#ba5050">
-         <font>
-            <Font name="System Bold" size="71.0" />
-         </font>
-      </Label>
-      <Button layoutX="255.0" layoutY="235.0" mnemonicParsing="false" onAction="#clic_IniciarJuego" prefHeight="25.0" prefWidth="192.0" text="Iniciar el Juego" textAlignment="CENTER" />
-      <Button layoutX="255.0" layoutY="266.0" mnemonicParsing="false" onAction="#clic_Reglas" prefHeight="25.0" prefWidth="192.0" text="Reglas" textAlignment="CENTER" />
-      <Button layoutX="255.0" layoutY="300.0" mnemonicParsing="false" onAction="#clic_Config" prefHeight="25.0" prefWidth="192.0" text="Configuracion" textAlignment="CENTER" />
-      <Button layoutX="254.0" layoutY="336.0" mnemonicParsing="false" onAction="#clic_Tutorial" prefHeight="25.0" prefWidth="192.0" text="Tutorial" textAlignment="CENTER" />
-      <Button layoutX="255.0" layoutY="430.0" mnemonicParsing="false" onAction="#clic_Salir" prefHeight="25.0" prefWidth="192.0" text="Salida" textAlignment="CENTER" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="253.0" AnchorPane.topAnchor="430.0" />
-      <Button layoutX="301.0" layoutY="196.0" mnemonicParsing="false" onAction="#clic_Fondo" text="Cambiar Fondo" />
-      <Pane fx:id="puno" layoutX="355.0" layoutY="109.0" prefHeight="408.0" prefWidth="200.0" style="-fx-background-color: red;">
+      <Pane fx:id="cuento" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #91CB9A;">
          <children>
-            <Button mnemonicParsing="false" onAction="#botonRojo" text="Button" />
+            <GridPane layoutY="496.0" prefHeight="90.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#iniciarJuaego" prefHeight="42.0" prefWidth="255.0" style="-fx-background-color: #E67E22;" text="Iniciar" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="38.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="142.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="58.0" minHeight="8.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="11.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="13.0" prefHeight="81.0" prefWidth="159.0" text="AhorcaCuento" textAlignment="CENTER" textFill="#ba5050">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="268.0" layoutY="10.0" prefHeight="90.0" prefWidth="425.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Salir" prefHeight="30.0" prefWidth="195.0" style="-fx-background-color: #E67E22;" text="Salir" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="38.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="142.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="40.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <ImageView fitHeight="81.0" fitWidth="70.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/imagenes/fondo/logoCuento.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="165.0" prefHeight="332.0" prefWidth="644.0" style="-fx-background-color: #FDFEFE;" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <Label layoutX="30.0" layoutY="118.0" prefHeight="36.0" prefWidth="644.0" text="TITULO DEL CUENTO" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="20.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane fx:id="pdos" layoutX="155.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+      <Pane fx:id="Juego" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #D6EAF8;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <CheckBox mnemonicParsing="false" onAction="#selecnegro" text="CheckBox" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="109.0" layoutY="13.0" prefHeight="81.0" prefWidth="159.0" text="AhorcaCuento" textAlignment="CENTER" textFill="#ba5050">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="268.0" layoutY="10.0" prefHeight="90.0" prefWidth="425.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="38.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="142.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="40.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Nprincipal" prefHeight="30.0" prefWidth="195.0" style="-fx-background-color: #E67E22;" text="Salir" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#nuevoJuego" prefHeight="30.0" prefWidth="195.0" style="-fx-background-color: #E67E22;" text="Nuevo Juego" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <ImageView fitHeight="81.0" fitWidth="70.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/imagenes/fondo/logoCuento.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="frase" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="165.0" prefHeight="180.0" prefWidth="463.0" style="-fx-background-color: #FDFEFE;" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <ImageView fx:id="ahorcado" fitHeight="332.0" fitWidth="153.0" layoutX="36.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/imagenes/fondo/ahorcado.jpg" />
+               </image>
+            </ImageView>
+            <GridPane layoutX="211.0" layoutY="369.0" prefHeight="135.0" prefWidth="463.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="129.0" prefWidth="46.0" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#bto_B" prefHeight="129.0" prefWidth="46.0" text="B" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#bto_C" prefHeight="129.0" prefWidth="46.0" text="C" GridPane.columnIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_D" prefHeight="129.0" prefWidth="46.0" text="D" GridPane.columnIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#bto_E" prefHeight="129.0" prefWidth="46.0" text="E" GridPane.columnIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_F" prefHeight="129.0" prefWidth="46.0" text="F" GridPane.columnIndex="5" />
+                  <Button mnemonicParsing="false" onAction="#bto_G" prefHeight="129.0" prefWidth="46.0" text="G" GridPane.columnIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#bto_H" prefHeight="129.0" prefWidth="46.0" text="H" GridPane.columnIndex="7" />
+                  <Button mnemonicParsing="false" onAction="#bto_I" prefHeight="129.0" prefWidth="46.0" text="I" GridPane.columnIndex="8" />
+                  <Button mnemonicParsing="false" onAction="#bto_J" prefHeight="129.0" prefWidth="46.0" text="J" GridPane.columnIndex="9" />
+                  <Button mnemonicParsing="false" onAction="#bto_K" prefHeight="129.0" prefWidth="46.0" text="K" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_L" prefHeight="129.0" prefWidth="46.0" text="L" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_M" prefHeight="129.0" prefWidth="46.0" text="M" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_N" prefHeight="129.0" prefWidth="46.0" text="N" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_NN" prefHeight="129.0" prefWidth="46.0" text="Ñ" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_O" prefHeight="129.0" prefWidth="46.0" text="O" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_P" prefHeight="129.0" prefWidth="46.0" text="P" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_Q" prefHeight="129.0" prefWidth="46.0" text="Q" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_R" prefHeight="129.0" prefWidth="46.0" text="R" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_S" prefHeight="129.0" prefWidth="46.0" text="S" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#bto_T" prefHeight="129.0" prefWidth="46.0" text="T" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_U" prefHeight="129.0" prefWidth="46.0" text="U" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_V" prefHeight="129.0" prefWidth="46.0" text="V" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_W" prefHeight="129.0" prefWidth="46.0" text="W" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_X" prefHeight="129.0" prefWidth="46.0" text="X" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_Y" prefHeight="129.0" prefWidth="46.0" text="Y" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_Z" prefHeight="129.0" prefWidth="46.0" text="Z" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <Button mnemonicParsing="false" onAction="#bto_A" prefHeight="129.0" prefWidth="46.0" text="A" />
+               </children>
+            </GridPane>
+            <ProgressBar fx:id="tiempo" layoutX="211.0" layoutY="538.0" prefHeight="30.0" prefWidth="463.0" progress="0.16" />
+         </children></Pane>
+      <Pane fx:id="configuracion" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #14A1DE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="fondo" fitHeight="600.0" fitWidth="700.0" pickOnBounds="true">
+               <image>
+                  <Image url="/imagenes/fondo/fondoInicio.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="85.0" prefHeight="104.0" prefWidth="700.0" text="AhorcaCuento" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="71.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.6190476190476191" startY="0.2571428571428571">
+                     <stops>
+                        <Stop color="#00ff7c87" />
+                        <Stop color="#3c779e" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <GridPane layoutX="2.0" layoutY="238.0" prefHeight="340.0" prefWidth="700.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="70.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="153.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="77.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clic_Salir" prefHeight="78.0" prefWidth="140.0" style="-fx-background-color: #E74C3C;" text="Salida" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#clic_Tutorial" prefHeight="101.0" prefWidth="233.0" style="-fx-background-color: #F4D03F;" text="Tutorial" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#clic_Config" prefHeight="150.0" prefWidth="233.0" style="-fx-background-color: #DAF7A6;" text="Configuracion" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#clic_Reglas" prefHeight="81.0" prefWidth="233.0" style="-fx-background-color: #FF5733;" text="Reglas" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#clic_IniciarJuego" prefHeight="74.0" prefWidth="233.0" style="-fx-background-color: #28B463;" text="Iniciar el Juego" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#clic_Fondo" prefHeight="70.0" prefWidth="140.0" style="-fx-background-color: #273746;" text="Cambiar Fondo" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="12.0" />
+                     </font></Button>
+               </children>
+            </GridPane>
          </children>
       </Pane>
    </children>
