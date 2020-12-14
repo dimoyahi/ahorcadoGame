@@ -12,7 +12,7 @@
 
 <AnchorPane centerShape="false" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplication.escenarios.controller.inicioController">
    <children>
-      <Pane fx:id="cuento" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #91CB9A;">
+      <Pane fx:id="cuento" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #91CB9A;" visible="false">
          <children>
             <GridPane layoutY="496.0" prefHeight="90.0" prefWidth="700.0">
                <children>
@@ -62,7 +62,7 @@
                   <Image url="/imagenes/fondo/logoCuento.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="165.0" prefHeight="332.0" prefWidth="644.0" style="-fx-background-color: #FDFEFE;" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." textAlignment="CENTER" wrapText="true">
+            <Label fx:id="cuentoCompleto" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="165.0" prefHeight="332.0" prefWidth="644.0" style="-fx-background-color: #FDFEFE;" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
@@ -171,7 +171,7 @@
                   <Button mnemonicParsing="false" onAction="#bto_A" prefHeight="129.0" prefWidth="46.0" text="A" />
                </children>
             </GridPane>
-            <ProgressBar fx:id="tiempo" layoutX="211.0" layoutY="538.0" prefHeight="30.0" prefWidth="463.0" progress="0.16" />
+            <ProgressBar fx:id="tiempo" layoutX="211.0" layoutY="538.0" prefHeight="30.0" prefWidth="463.0" progress="0.0" />
          </children></Pane>
       <Pane fx:id="configuracion" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #14A1DE;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Pane fx:id="inicio" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
