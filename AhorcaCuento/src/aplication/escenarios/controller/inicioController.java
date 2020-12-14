@@ -245,6 +245,7 @@ public class inicioController {
 	public void clic_IniciarJuego(ActionEvent event) {
 		cuento.setVisible(true);
 		inicio.setVisible(false);
+		cuento();
 	}
 
 	// Event Listener on Button.onAction
@@ -255,5 +256,10 @@ public class inicioController {
 	public void fondoAleatorio() {
 		String url = imgFondo[(int)Math.floor(Math.random()*imgFondo.length)];
 		fondo.setImage(new Image(url));
+	}
+	public void cuento() {
+		String cuentos;
+		cuentos = "Este es el cuento que vamos a jugar hoy";
+		frase.setText(cuentos);
 	}
 }
